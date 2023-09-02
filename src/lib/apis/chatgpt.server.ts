@@ -1,8 +1,8 @@
 import OpenAI from "openai";
-import {json} from "@sveltejs/kit";
+import {OPENAI_API_KEY} from "$env/static/private";
 
 const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
+    apiKey: OPENAI_API_KEY,
 });
 
 export async function answerQuestion(resume: string, description: string, question: string) {
