@@ -1,38 +1,27 @@
-# create-svelte
+# Resume Reviewer
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## About
 
-## Creating a project
+[Resume Reviewer](https://resume-reviewer.ruck.io) is a web application designed to assist users in reviewing and enhancing their resumes. Whether you're a job seeker looking to polish your resume or a recruiter aiming to understand a candidate's background better, Resume Reviewer is here to help.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- **Resume Analysis**: Upload your resume and get instant feedback.
+- **Job Description Matching**: Match your resume with specific job descriptions to see how well they align.
+- **Add New Descriptions**: Add new job descriptions to our database to help others.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Getting Started
 
-## Developing
+1. Visit [Resume Reviewer](https://resume-reviewer.ruck.io).
+2. Upload your resume or paste your resume content.
+3. Get instant feedback and recommendations.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Contribute
 
-```bash
-npm run dev
+We welcome contributions! If you'd like to contribute, please check out our [GitHub repository](https://github.com/ruckc/resume-reviewer).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. **Fork** the repository.
+2. Create your **feature branch** (`git checkout -b feature/AmazingFeature`).
+3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`).
+4. **Push** to the branch (`git push origin feature/AmazingFeature`).
+5. Open a **pull request**.
