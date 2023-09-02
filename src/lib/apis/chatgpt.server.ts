@@ -1,10 +1,11 @@
 import OpenAI from "openai";
+import {OPENAI_API_KEY} from "$env/static/private";
 
-export async function answerQuestion(apiKey: string, resume: string, description: string, question: string) {
-    const openai = new OpenAI({
-        apiKey: $env.OPENAI_API_KEY,
-    });
+const openai = new OpenAI({
+    apiKey: OPENAI_API_KEY,
+});
 
+export async function answerQuestion(resume: string, description: string, question: string) {
     return openai.chat.completions.create({
         model: 'gpt-3.5-turbo-16k',
         messages: [
