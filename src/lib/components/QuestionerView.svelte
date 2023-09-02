@@ -8,15 +8,20 @@
 
     let newQuestion = "";
 
+    let allQuestions = [];
     const questions = writable([]);
     const answers = {};
 
     let draggedItemIndex = null;
 
+    questions.subscribe((qs) => allQuestions = qs);
+
     function addQuestion() {
-        if (newQuestion.trim() !== "") {
-            questions.update(qs => [...qs, newQuestion.trim()]);
+        const question = newQuestion.trim();
+        if (question !== "") {
+            questions.update(qs => [...qs, question]);
             newQuestion = "";
+            answerQuestion(resume, description, question);
         }
     }
 
@@ -60,8 +65,10 @@
         document.removeEventListener('mouseup', onMouseUp);
     }
 
-    $: if (resume || description || $questions.length) {
-        answerQuestion(resume, description, $questions[$questions.length - 1]);
+    $: if (resume || description) {
+        for(const question of allQuestions) {
+          answerQuestion(resume, description, question);
+        }
     }
 
     async function answerQuestion(resume: string, description: string, question: string) {
