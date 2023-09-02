@@ -1,6 +1,8 @@
 <script lang="ts">
     import {writable} from "svelte/store";
 
+    export let darkMode: boolean;
+
     let resume: string = '';
     let description: string = '';
     let separatorY = 50;
@@ -213,6 +215,82 @@
         display: flex;
         flex-direction: column;
     }
+
+    :global(body) {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #f4f4f8;
+      overflow: hidden; /* Prevents outer scroll */
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 60px);
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* ... the rest of your styles ... */
+
+    /* Dark Mode Styles */
+    :global(body.dark-mode) {
+      background-color: #333;
+    }
+
+    :global(body.dark-mode) .container {
+      background-color: #444;
+      color: #e7e7ec;
+    }
+
+    :global(body.dark-mode) textarea {
+      background-color: #555;
+      color: #ddd;
+    }
+
+    :global(body.dark-mode) .header {
+      background-color: #555;
+    }
+
+    :global(body.dark-mode) .separator {
+      background-color: #555;
+    }
+
+    :global(body.dark-mode) .right-panel {
+      background-color: #444;
+    }
+
+    :global(body.dark-mode) .question-item {
+      background-color: #555;
+      color: #ddd;
+    }
+
+    :global(body.dark-mode) input[type="text"] {
+      background-color: #555;
+      color: #ddd;
+      border-color: #666;
+    }
+
+    :global(body.dark-mode) button {
+      background-color: #666;
+      color: #ddd;
+    }
+
+    :global(body.dark-mode) button:hover {
+      background-color: #555;
+    }
+
+    :global(body.dark-mode) .delete-btn {
+      background-color: #888;
+      color: #333;
+    }
+
+    :global(body.dark-mode) .delete-btn:hover {
+      background-color: #777;
+    }
+
 </style>
 
 <div class="container">
