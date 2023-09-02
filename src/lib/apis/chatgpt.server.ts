@@ -1,11 +1,10 @@
 import OpenAI from "openai";
-import {json} from "@sveltejs/kit";
 
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY,
-});
+export async function answerQuestion(apiKey: string, resume: string, description: string, question: string) {
+    const openai = new OpenAI({
+        apiKey: $env.OPENAI_API_KEY,
+    });
 
-export async function answerQuestion(resume: string, description: string, question: string) {
     return openai.chat.completions.create({
         model: 'gpt-3.5-turbo-16k',
         messages: [
