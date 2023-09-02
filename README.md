@@ -13,8 +13,12 @@
 ## Getting Started
 
 1. Visit [Resume Reviewer](https://resume-reviewer.ruck.io).
-2. Upload your resume or paste your resume content.
-3. Get instant feedback and recommendations.
+2. Paste your resume content.
+3. Paste the job description.
+4. Ask questions about the resume based on the job description, such as:
+   a. Is this applicant qualified for the position?
+   b. Will the applicant add value to the team?
+   c. What will the applicant excel at?
 
 ## Contribute
 
